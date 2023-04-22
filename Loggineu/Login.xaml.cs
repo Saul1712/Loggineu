@@ -39,5 +39,22 @@ namespace Loggineu
         {
             Navigation.PushAsync(new Registro());
         }
+
+        private void txtDato_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                double numero = Convert.ToDouble(txtDato.Text);
+                if (numero < 1 && numero >10)
+                {
+                    DisplayAlert("Mensaje", "El rango permitido es de 1 -10 ", "Cerrar");
+                    txtDato.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                    DisplayAlert("ERROR", ex.Message, "Cerrar");
+            }
+        }
     }
 }

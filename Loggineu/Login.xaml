@@ -10,7 +10,8 @@
                        HorizontalTextAlignment="Center"/>
               
                 <Image Source="login.png" WidthRequest="100" HeightRequest="100"/>
-                    <Grid>
+                <Entry x:Name="txtDato" Placeholder="Dato" MaxLength="5" TextChanged="txtDato_TextChanged"/>
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition/>
                         <RowDefinition/>
